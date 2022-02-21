@@ -1,0 +1,114 @@
+TEMA 2
+DRUGĂ MARIA-ALEXANDRA
+313 CB
+
+
+
+În funcția main declar matricea board cu dimensiunea de 15 linii și 15 
+coloane și o variabila task de tip char prin care rețin numărul cerinței 
+la care mă aflu. Prin funcția getchar() citesc numărul cerinței la care mă 
+aflu. Mai apelez încă o dată getchar() pentru a citi endline - ul. Apoi 
+în funcție de task apelez funcția corespunzătoare.
+
+TASK 0:
+Parcurg matricea board și o populez cu caracterul '.'. Apoi afișez matricea 
+board cu funcția print_board.
+
+TASK 1:
+În funcția task1 citesc variabila N cu fgets și prin funcția strtol schimb
+tipul lui N în întreg. Parcurg cu un for liniile din input. Citesc mai întâi
+toată linia, apoi cu funcția strtok aplicată liniei obțin patru variabile: 
+Y - indicele de pe verticală unde va fi plasat cuvântul, X - indicele pe 
+orizontală unde va fi plasat cuvântul, D - direcția în care este scris 
+cuvântul și WORD - cuvântul. În variabila len păstrez lungimea cuvântului, 
+iar variabila contor reține poziția caracterelor din WORD. Verific dacă 
+cuvântul trebuie plasat pe verticală sau pe orizontală și copiez fiecare
+caracter din WORD pe poziția corespunzătoare din matrice.
+
+TASK2:
+în funcția task 2 citesc variabila N cu fgets și prin funcția strtol schimb 
+tipul lui N în întreg. Parcurg cu un for liniile din input. Citesc mai întâi
+toată linia, apoi aplic funcția strtok de patru ori, iar rezultatul final în 
+păstrez în variabila WORD. Apoi parcurg fiecare caracter din WORD și adaug în 
+variabila sum valoarea corespunzătoare fiecărei litere, valoare pe care o aflu
+prin compararea din cadrul instrucțiunei if. În cele din urmă verific la ce 
+jucător mă aflu: dacă pasul i la care mă aflu este impar, atunci adaug sum 
+la sum1, altfel o adaug la sum2. Apoi afișez punctajul pentru jucătorul 1 și
+pentru jucătorul 2.
+
+TASK 3:
+În funcția task 3 citesc cele două stringuri cu funcția fgets și variabila N, 
+apoi prin funcția strtol schimb tipul lui N în întreg. Parcurg cu un for 
+liniile din input. Citesc mai întâi toată linia, apoi cu funcția strtok 
+aplicată liniei obțin patru variabile: Y , X, D și WORD. Inițializez două 
+variabile logicx si logicy cu 0 care se incrementează în cazul în care gasesc 
+str1 în WORD, respectiv str2 la finalul lui WORD. Apoi calculez în variabila 
+sum punctajul în funcție de valoarea literei. Verific dacă logicx este diferit
+de 0 și dacă WORD este plasat pe verticală sau orizontală. Daca în matricea 
+bonus_board la coordonatele caracterelor există carcaterul '1', atunci
+multiplic cu 2 variabila sum. Verific dacă logicy este diferit de 0 și
+dacă WORD este plasat pe verticală sau orizontală. Dacă la coordonatele la 
+care se află caracterele există valoarea 2, atunci multiplic cu 3 sum. În 
+cele din urmă verific la ce jucător mă aflu: dacă pasul i la care mă aflu 
+este impar, atunci adaug sum la sum1, altfel o adaug la sum2. Apoi afișez 
+punctajul pentru jucătorul 1 și pentru jucătorul 2.
+
+TASK 4:
+în funcția task 4 citesc cele două stringuri cu funcția fgets și variabila N,
+apoi prin funcția strtol schimb tipul lui N în întreg. Parcurg cu un for 
+liniile din input. Citesc mai întâi toată linia, apoi cu funcția strtok 
+aplicată liniei obțin patru variabile: Y, X, D și WORD. În variabila întreagă 
+len memorez lungimea lui WORD și adaug sfârșitul de șir, apoi actualizez
+valoarea lui len. Inițializez o variabilă întreagă contor pe care o voi folosi
+pentru a parcurge caracterele din WORD. Verific dacă cuvântul trebuie plasat pe 
+verticală sau pe orizontală, apoi adaug cu ajutorul unui for caracterele 
+lui WORD în matricea board. Inițializez o variabilă logic cu valoarea zero
+care mă ajută să verific dacă cuvântul din matrice apare în vectorul words.
+Parcurg vectorul de apariții, apparition și verific dacă cuvântul citit apare
+în vectroul words. Dacă WORD se află în words atunci logic devine 1. Adaug
+valoarea lui logic în vectorul de apariției. Apoi parcurg toate cuvintele
+din vectorul words și matricea board. Verific dacă caracterul din matricea
+board este egal cu primul caracter din cuvântul din vectroul words. 
+Inițializez două variabile logice vert și oriz care mă ajută să aflu dacă 
+plasez cuvântul găsit pe verticală sau pe orizontală. Variabila întreagă 
+lung reține lungimea cuvântului din words. Parcurg elementele din matrice care 
+se află sub primul caracter și verific dacă am suficient loc pentru plasarea 
+cuvântului și dacă locul este liber. Repet procedeu pentru cazul în care pot
+plasa cuvântul pe orizontală. Aplic de trei ori instrucțiunea if pentru a 
+verifica dacă am găsit un cuvânt optim și dau break pentru a ieși din for. 
+Procedez astfel de trei ori, deoarece este necesar să ies din 3 for-uri.
+În final mă folosesc de o variabilă întreagă el pentru a contoriza pozițiile 
+din cuvântul pe care îl adaug în matrice; în funcție de variabilele
+oriz și vert adaug cuvântul pe verticală sau pe orizontală.
+
+TASK 5:
+În funcția task 5 plasez mai înâi fiecare cuvânt din input în matricea board și
+verific dacă str1 și str2 se află în cuvântul citit. Calculez scorul fără
+bonusuri prin verificări succesive a fiecărui caracter din cuvântul citit.
+Prin variabilele logicx și logicy verific dacă la coordonatele la care este
+plasat cuvântul se află 1 sau 2, pe verticală sau pe orizontală, în funcție 
+de direcție, și în caz afirmativ multiplic cu 2, respectiv 3. În funcție de 
+jucătorul la care mă aflu atribui sum lui sum1 sau sum2. Totodată creez și 
+vectorul de apariții, apparition, în care rețin dacă cuvântul citit se află
+în lista de cuvinte words. În acest moment am calculat scorul jucătorului 
+1 și scorul pentru jucătorul 2. Inițializez variabila întreagă Max în care 
+voi păstra scorul maxim pe care îl poate atinge jucătorul 2. Apoi parcurg 
+lista de cuvinte și matricea board. Verific dacă găsesc primul caracter din
+cuvântul din words în matrice și dacă apariția lui este 0. Inițializez 
+variabilele vert și oriz cu 1 pentru a verifica dacă pot plasa cuvântul pe
+orizontală sau pe verticală. Calculez lungimea cuvântului din words și testez
+dacă are loc pe tablă și nu depășește marginile, atât pentru verticală, cât și
+pentru orizontală. În cazul în care cuvântul are loc fie pe verticală, fie pe
+orizontală, calculez suma pentru verticală și suma pentru orizontală, mai întâi
+fără bonusuri și apoi le adaug și pe acestea, dacă str1 sau str2 se află în
+cuvânt. În cele din urmă efectuez trei verificări atât pentru orizontală, cât
+și pentru verticală; în variabilele x_max, y_max, d_max, lung_max, word_max
+rețin coordonatele cuvântului, lungimea, direcția și cuvântul. Cele trei 
+verificări sunt: prima - dacă suma jucătorului doi adunată cu suma cuvântului
+pe orizontală depășește Max și cuvântul încape pe orizontală, a doua - suma pe
+orizontală adunată la suma 2 este egală cu Max, cuvântul încape pe orizontală
+și i nu depășește x_max, a treia - suma pe orizontală adunată la suma
+2 este egală cu Max, cuvântul încape pe orizontală, i este egal cu x_max și j
+nu depășește y_max. Același set de verificări îl aplic și pentru verticală. 
+În final dacă Max este mai mic decât suma jucătorului 1, atunci afișez mesajul
+"Fail!", altfel adaug cuvântul și afișez tabla.
